@@ -1,0 +1,62 @@
+.swiper-container {
+      width: 100%;
+      height: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: initial;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  color: #3F8F74;
+}
+.swiper-button-prev{
+  left: 8rem;
+}
+.swiper-button-next{
+  right: 8rem;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    border: #3F8F74 solid 1px;
+    background-color: transparent;
+    transform: translateY(8rem);
+}
+.swiper-pagination-bullet-active {
+    background-color: #3F8F74;
+}
+
+.left-3 img{
+  width: 265px;
+  border-radius: 5px;
+  justify-self: center;
+}
+@media screen and (orientation:landscape) {
+  .swiper-pagination{
+    z-index: 10 !important;
+  }
+}
+@media screen and (orientation:portrait) {
+  .swiper-pagination{
+    z-index: 0 !important;
+  }
+}
