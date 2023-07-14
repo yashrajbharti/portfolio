@@ -29,7 +29,7 @@ $("#fullpage").fullpage({
       showAll.forEach((show) => {
         const number = parseInt(show.textContent) + 1;
         let counter = 0,
-          delay = 100;
+          delay = parseInt(6000 / parseInt(show.textContent));
         counter_js(delay, show, counter, number);
       });
       function counter_js(delay, show, counter, number) {
