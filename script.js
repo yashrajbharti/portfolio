@@ -1,6 +1,7 @@
 // variables
 var $header_top = $(".header-top");
 var $nav = $("nav");
+let indexVisited = false;
 
 // toggle menu
 $header_top.find("a").on("click", function () {
@@ -25,6 +26,7 @@ $("#fullpage").fullpage({
       $("#fp-nav").hide();
     }
     if (index == 2) {
+      if (indexVisited) return;
       const showAll = document.querySelectorAll(".num");
       showAll.forEach((show) => {
         const number = parseInt(show.textContent) + 1;
@@ -41,6 +43,7 @@ $("#fullpage").fullpage({
           }, delay);
         }
       }
+      indexVisited = true;
     }
     if (index == 3) {
       $("#demonstrate").addClass("add_keyframe");
@@ -86,54 +89,54 @@ $("#fullpage").fullpage({
     if (index == 5) {
       $("#fp-nav").show();
     }
-    if (index == 3) {
-      setTimeout(function () {
-        $("#demonstrate").removeClass("add_keyframe");
-        $("#demonstrate2").removeClass("add_keyframe");
-        $("#demonstrate3").removeClass("add_keyframe");
-        $("#demonstrate14").removeClass("up_keyframe1");
-        $("#demonstrate15").removeClass("up_keyframe1");
-        $("#demonstrate16").removeClass("add_keyframe2");
-        $("#demonstrate17").removeClass("add_keyframe2");
-        $("#demonstrate18").removeClass("add_keyframe2");
-        $("#demonstrate19").removeClass("button_keyframe");
-        $("#demonstrate20").removeClass("button_keyframe");
-        $("#demonstrate21").removeClass("button_keyframe");
-        $("#demonstrate22").removeClass("img_keyframe");
-        $("#demonstrate23").removeClass("img_keyframe");
-        $("#demonstrate24").removeClass("img_keyframe");
-      }, 800);
-    }
-    if (index == 1) {
-      setTimeout(function () {
-        $("#demonstrate4").removeClass("left_keyframe");
-        $("#demonstrate5").removeClass("right_keyframe");
-        $("#demonstrate6").removeClass("left_keyframe2");
-        $("#demonstrate7").removeClass("up_keyframe0");
-        $("#demonstrate8").removeClass("button_keyframe");
-      }, 800);
-    }
+    // if (index == 3) {
+    //   setTimeout(function () {
+    //     $("#demonstrate").removeClass("add_keyframe");
+    //     $("#demonstrate2").removeClass("add_keyframe");
+    //     $("#demonstrate3").removeClass("add_keyframe");
+    //     $("#demonstrate14").removeClass("up_keyframe1");
+    //     $("#demonstrate15").removeClass("up_keyframe1");
+    //     $("#demonstrate16").removeClass("add_keyframe2");
+    //     $("#demonstrate17").removeClass("add_keyframe2");
+    //     $("#demonstrate18").removeClass("add_keyframe2");
+    //     $("#demonstrate19").removeClass("button_keyframe");
+    //     $("#demonstrate20").removeClass("button_keyframe");
+    //     $("#demonstrate21").removeClass("button_keyframe");
+    //     $("#demonstrate22").removeClass("img_keyframe");
+    //     $("#demonstrate23").removeClass("img_keyframe");
+    //     $("#demonstrate24").removeClass("img_keyframe");
+    //   }, 800);
+    // }
+    // if (index == 1) {
+    //   setTimeout(function () {
+    //     $("#demonstrate4").removeClass("left_keyframe");
+    //     $("#demonstrate5").removeClass("right_keyframe");
+    //     $("#demonstrate6").removeClass("left_keyframe2");
+    //     $("#demonstrate7").removeClass("up_keyframe0");
+    //     $("#demonstrate8").removeClass("button_keyframe");
+    //   }, 800);
+    // }
 
-    if (index == 2) {
-      setTimeout(function () {
-        $("#demonstrate9").removeClass("up_keyframe1");
-        $("#demonstrate10").removeClass("up_keyframe1");
-        $("#demonstrate11").removeClass("left_keyframe3");
-        $("#demonstrate12").removeClass("right_keyframe");
-        $("#demonstrate13").removeClass("button_keyframe");
-      }, 800);
-    }
-    if (index == 4) {
-      setTimeout(function () {
-        $("#demonstrate25").removeClass("up_keyframe1");
-        $("#demonstrate26").removeClass("up_keyframe1");
-        $("#demonstrate27").removeClass("button_keyframe");
-        $("#demonstrate28").removeClass("left_keyframe4");
-        $("#demonstrate29").removeClass("left_keyframe4");
-        $("#demonstrate30").removeClass("left_keyframe4");
-        $("#demonstrate31").removeClass("right_keyframe4");
-      }, 800);
-    }
+    // if (index == 2) {
+    //   setTimeout(function () {
+    //     $("#demonstrate9").removeClass("up_keyframe1");
+    //     $("#demonstrate10").removeClass("up_keyframe1");
+    //     $("#demonstrate11").removeClass("left_keyframe3");
+    //     $("#demonstrate12").removeClass("right_keyframe");
+    //     $("#demonstrate13").removeClass("button_keyframe");
+    //   }, 800);
+    // }
+    // if (index == 4) {
+    //   setTimeout(function () {
+    //     $("#demonstrate25").removeClass("up_keyframe1");
+    //     $("#demonstrate26").removeClass("up_keyframe1");
+    //     $("#demonstrate27").removeClass("button_keyframe");
+    //     $("#demonstrate28").removeClass("left_keyframe4");
+    //     $("#demonstrate29").removeClass("left_keyframe4");
+    //     $("#demonstrate30").removeClass("left_keyframe4");
+    //     $("#demonstrate31").removeClass("right_keyframe4");
+    //   }, 800);
+    // }
   },
 
   afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
